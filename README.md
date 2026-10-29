@@ -13,9 +13,6 @@ tested to give its numbers on the same input.
 ## Installation
 
 ```r
-install.packages("ssdiff")
-
-# or the development version from r-universe:
 install.packages("ssdiff", repos = c("https://pawlenartowicz.r-universe.dev", getOption("repos")))
 ```
 
@@ -27,7 +24,7 @@ ssdiff::install_backends()
 
 | Function | Needs |
 |---|---|
-| `fit_pls()`, `fit_multipls()`, `fit_regression(ssd_gradients > 1)` | plskit |
+| `fit_pls()`, `fit_multipls()`, `fit_regression()` with `ssd_gradients` above 1 | plskit |
 | `fit_regression()` with random effects (`(1 \| g)`) or a family base R does not fit the same way | fastglmm |
 | everything else | nothing beyond CRAN |
 
