@@ -1,0 +1,88 @@
+{
+ "case": "evaluate_lexicon",
+ "call": "evaluate_lexicon",
+ "args": [
+  "y",
+  [
+   "people",
+   "like"
+  ]
+ ],
+ "kwargs": {},
+ "stats": {
+  "columns": [
+   "var_type",
+   "n_docs",
+   "n_tokens"
+  ],
+  "rows": [
+   [
+    "continuous",
+    240,
+    2
+   ]
+  ]
+ },
+ "suggestions": {
+  "columns": [
+   "token",
+   "freq",
+   "cov_all",
+   "cov_bal",
+   "corr",
+   "pvalue",
+   "direction",
+   "rank"
+  ],
+  "rows": [
+   [
+    "like",
+    218,
+    0.9083333333333333,
+    0.9083333333333334,
+    -0.037243293076842675,
+    0.5658611732816835,
+    "negative",
+    0.7955689181840042
+   ],
+   [
+    "people",
+    215,
+    0.8958333333333334,
+    0.8958333333333335,
+    0.13295408667213252,
+    0.03957975887794948,
+    "positive",
+    0.49881765785404886
+   ]
+  ]
+ },
+ "summary": {
+  "columns": [
+   "docs_any",
+   "cov_all",
+   "q1",
+   "q4",
+   "corr_any",
+   "hits_mean",
+   "hits_median",
+   "types_mean",
+   "types_median",
+   "group_cov"
+  ],
+  "rows": [
+   [
+    240,
+    1.0,
+    1.0,
+    1.0,
+    0.0,
+    3.5166666666666666,
+    3.0,
+    1.8041666666666667,
+    2.0,
+    null
+   ]
+  ]
+ }
+}

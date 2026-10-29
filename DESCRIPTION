@@ -1,0 +1,43 @@
+Package: ssdiff
+Title: Supervised Semantic Differential
+Version: 0.1.0
+Authors@R: c(
+    person("Paweł", "Lenartowicz", email = "pawellenartowicz@europe.com",
+           role = c("aut", "cre")),
+    person("Hubert", "Plisiecki", email = "hplisiecki@gmail.com",
+           role = "aut"),
+    person("Jason", "Miller", role = c("ctb", "cph"),
+           comment = "Preact (MIT licence), bundled in inst/page_template.html"),
+    person("Google Inc.", role = "cph",
+           comment = "htm (Apache-2.0 licence), bundled in inst/page_template.html")
+    )
+Description: Interpretable, embedding-based analysis of concept meaning in
+    text. Builds per-document concept vectors from local contexts around
+    seed words, learns a semantic gradient that predicts a numeric outcome
+    or separates groups, and interprets it through the nearest neighbours of
+    each pole, clusters of those neighbours, text snippets and per-document
+    scores. The method is described in Plisiecki, Lenartowicz, Pokropek,
+    Małyska and Flakus (2025) <doi:10.31234/osf.io/gvrsb_v1>. A port of the
+    'Python' package 'ssdiff'.
+License: GPL (>= 3)
+URL: https://github.com/pawlenartowicz/ssdiff-r
+BugReports: https://github.com/pawlenartowicz/ssdiff-r/issues
+Depends: R (>= 4.5.0)
+Imports:
+    graphics,
+    grDevices,
+    jsonlite,
+    nlme,
+    stats,
+    tools,
+    utf8,
+    utils
+Suggests:
+    plskit (>= 0.7.1),
+    fastglmm (>= 0.6.2),
+    testthat (>= 3.0.0)
+Additional_repositories: https://pawlenartowicz.r-universe.dev
+Config/testthat/edition: 3
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3

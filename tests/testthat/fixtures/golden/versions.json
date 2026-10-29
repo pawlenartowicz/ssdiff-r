@@ -1,0 +1,10 @@
+{
+ "ssdiff": "4.0.1",
+ "plskit": "0.7.2",
+ "glmm": "0.6.2",
+ "numpy": "2.5.4",
+ "pack": "en-glove2024-dolma-1",
+ "testpack": "test-1",
+ "r_plskit": "0.7.2",
+ "r_fastglmm": "0.6.2"
+}

@@ -1,0 +1,37 @@
+# R CMD check --as-cran on every push and pull request (spec 01, "CI"). The
+# tests need no Python: they compare against goldens committed in tests/testthat/fixtures.
+name: R-CMD-check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  R-CMD-check:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      R_KEEP_PKG_SOURCE: yes
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: ssdiff-r
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: release
+          use-public-rspm: true
+          # plskit and fastglmm are on r-universe only (Suggests).
+          extra-repositories: https://pawlenartowicz.r-universe.dev
+
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          working-directory: ssdiff-r
+          extra-packages: any::rcmdcheck
+          needs: check
+
+      - uses: r-lib/actions/check-r-package@v2
+        with:
+          working-directory: ssdiff-r
+          args: 'c("--no-manual", "--as-cran")'
+          error-on: '"warning"'

@@ -1,0 +1,11 @@
+^\.git$
+^\.gitignore$
+^.*\.Rproj$
+^\.Rproj\.user$
+^\.github$
+^LICENSE$
+^bugtracker\.md$
+^README\.Rmd$
+^.*\.Rcheck$
+^ssdiff_.*\.tar\.gz$
+^tests/parity$

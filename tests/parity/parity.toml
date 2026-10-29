@@ -1,0 +1,3 @@
+ssdiff = "4.0.1"                 # exact pin; plskit and glmm come from its dependencies
+pack = "en-glove2024-dolma-1"    # real pack for parity
+testpack = "test-1"        # test pack in the wordpack bucket
